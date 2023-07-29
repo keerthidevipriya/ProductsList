@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductListView: View {
+    var albums = ApiIntegration().loadJson(filename: "")
     var body: some View {
         NavigationView {
             List(0..<20) { item in
@@ -30,6 +31,7 @@ struct ProductListView: View {
                 }
                 //.padding()
             }
+            .navigationTitle("List")
             //.padding()
         }
     }

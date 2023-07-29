@@ -27,9 +27,9 @@ struct ProductListView: View {
                     .foregroundColor(.secondary)
                 
             }
-            .padding()
+            //.padding()
         }
-        .padding()
+        //.padding()
     }
 }
 

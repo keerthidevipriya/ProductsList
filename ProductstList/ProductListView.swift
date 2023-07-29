@@ -20,7 +20,7 @@ struct ProductListView: View {
                     .cornerRadius(4)
                     .foregroundColor(.accentColor)
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Hi this is keerthi devipriya sharing my views")
+                    Text(albums[item].title ?? "Default Title")
                         .lineLimit(2)
                         //.fontWeight(.semibold)
                         .minimumScaleFactor(0.5)

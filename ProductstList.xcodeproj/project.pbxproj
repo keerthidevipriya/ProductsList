@@ -16,6 +16,7 @@
 		56BF6C512A757E5C00BD32A6 /* ProductstListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C502A757E5C00BD32A6 /* ProductstListUITestsLaunchTests.swift */; };
 		56BF6C5F2A758BEF00BD32A6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C5E2A758BEF00BD32A6 /* Album.swift */; };
 		56BF6C622A758C5B00BD32A6 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C612A758C5B00BD32A6 /* Api.swift */; };
+		56BF6C652A75946400BD32A6 /* mockalbums.json in Resources */ = {isa = PBXBuildFile; fileRef = 56BF6C642A75946400BD32A6 /* mockalbums.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		56BF6C502A757E5C00BD32A6 /* ProductstListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductstListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		56BF6C5E2A758BEF00BD32A6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		56BF6C612A758C5B00BD32A6 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		56BF6C642A75946400BD32A6 /* mockalbums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockalbums.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		56BF6C322A757E5A00BD32A6 /* ProductstList */ = {
 			isa = PBXGroup;
 			children = (
+				56BF6C632A75944100BD32A6 /* Resources */,
 				56BF6C602A758C4A00BD32A6 /* ApiIntegration */,
 				56BF6C5D2A758AF400BD32A6 /* Model */,
 				56BF6C332A757E5A00BD32A6 /* ProductstListApp.swift */,
@@ -147,6 +150,14 @@
 				56BF6C612A758C5B00BD32A6 /* Api.swift */,
 			);
 			path = ApiIntegration;
+			sourceTree = "<group>";
+		};
+		56BF6C632A75944100BD32A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56BF6C642A75946400BD32A6 /* mockalbums.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BF6C652A75946400BD32A6 /* mockalbums.json in Resources */,
 				56BF6C3B2A757E5C00BD32A6 /* Preview Assets.xcassets in Resources */,
 				56BF6C382A757E5C00BD32A6 /* Assets.xcassets in Resources */,
 			);

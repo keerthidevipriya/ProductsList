@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProductListView: View {
-    var albums = ApiIntegration().loadJson(filename: "")
+    let albums = ApiIntegration().loadJson()
     var body: some View {
         NavigationView {
-            List(0..<20) { item in
+            List(0..<albums.count) { item in
                 Image("img1")
                     .resizable()
                     .scaledToFit()

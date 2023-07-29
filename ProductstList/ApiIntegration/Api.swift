@@ -13,12 +13,8 @@ class ApiIntegration {
         static let url = "https://jsonplaceholder.typicode.com/photos"
     }
     
-    func getAlbumList() -> [Album] {
-        return []
-    }
-    
-    func loadJson(filename fileName: String) -> [Album]? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+    func loadJson() -> [Album] {
+        if let url = Bundle.main.url(forResource: "mockalbums", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
@@ -28,7 +24,7 @@ class ApiIntegration {
                 print("error:\(error)")
             }
         }
-        return nil
+        return []
     }
 }
 

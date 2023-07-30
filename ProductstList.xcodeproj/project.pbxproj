@@ -17,6 +17,7 @@
 		56BF6C5F2A758BEF00BD32A6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C5E2A758BEF00BD32A6 /* Album.swift */; };
 		56BF6C622A758C5B00BD32A6 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C612A758C5B00BD32A6 /* Api.swift */; };
 		56BF6C652A75946400BD32A6 /* mockalbums.json in Resources */ = {isa = PBXBuildFile; fileRef = 56BF6C642A75946400BD32A6 /* mockalbums.json */; };
+		56BF6C672A7665A500BD32A6 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF6C662A7665A500BD32A6 /* ProductDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		56BF6C5E2A758BEF00BD32A6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		56BF6C612A758C5B00BD32A6 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		56BF6C642A75946400BD32A6 /* mockalbums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockalbums.json; sourceTree = "<group>"; };
+		56BF6C662A7665A500BD32A6 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				56BF6C352A757E5A00BD32A6 /* ProductListView.swift */,
 				56BF6C372A757E5C00BD32A6 /* Assets.xcassets */,
 				56BF6C392A757E5C00BD32A6 /* Preview Content */,
+				56BF6C662A7665A500BD32A6 /* ProductDetailView.swift */,
 			);
 			path = ProductstList;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BF6C362A757E5A00BD32A6 /* ProductListView.swift in Sources */,
+				56BF6C672A7665A500BD32A6 /* ProductDetailView.swift in Sources */,
 				56BF6C342A757E5A00BD32A6 /* ProductstListApp.swift in Sources */,
 				56BF6C622A758C5B00BD32A6 /* Api.swift in Sources */,
 				56BF6C5F2A758BEF00BD32A6 /* Album.swift in Sources */,

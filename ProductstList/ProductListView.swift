@@ -20,6 +20,7 @@ struct ProductListView: View {
                         .frame(height: 90)
                         .cornerRadius(4)
                         .foregroundColor(.accentColor)
+                        .padding(.vertical, 4)
                     VStack(alignment: .leading, spacing: 5) {
                         Text(albums[item].title ?? "Default Title")
                             .lineLimit(2)

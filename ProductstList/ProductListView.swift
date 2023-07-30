@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductListView: View {
-    let albums = ApiIntegration().loadJson()
+    @State var albums = ApiIntegration().loadJson()
     var body: some View {
         NavigationView {
             List(0..<albums.count) { item in

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @State private var isAlert = false
+    @State private var updatedTitle = String()
     var album: Album
     var body: some View {
         VStack(spacing: 20) {
@@ -27,9 +28,17 @@ struct ProductDetailView: View {
                 .padding(.horizontal)
             
             HStack(spacing: 40) {
-                Label("Update your title", systemImage: "square.and.pencil")
+                VStack(alignment: .leading) {
+                    Text("Update Title")
+                        .font(.caption)
+                        .foregroundColor(.accentColor)
+                    TextField("Update your title", text: $updatedTitle)
+                }
+                
+                
+                /*Label("Update your title", systemImage: "square.and.pencil")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.secondary)*/
                     //.font(.system(size: 16.0, weight: .bold))
             }.padding()
             
@@ -52,7 +61,9 @@ struct ProductDetailView: View {
             .foregroundColor(.white)
             .cornerRadius(4)
             .alert(isPresented: $isAlert) { () -> Alert in
-                Alert(title: Text("Update Title"), message: Text("Provide your updated title here"), primaryButton: .default(Text("Ok"), action: {
+                Alert(title: Text("Update Title"),
+                      message: Text("Provide your updated title here"),
+                      primaryButton: .default(Text("Ok"), action: {
                     updateTitle("new")
                 }), secondaryButton: .cancel())
         }

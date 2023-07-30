@@ -50,6 +50,7 @@ struct ProductDetailView: View {
             
             Button(action: {
                 self.isAlert = true
+                updateTitle("newwww")
             }) {
                 Text("Update Title")
                 .foregroundColor(Color.white)
@@ -61,10 +62,10 @@ struct ProductDetailView: View {
             .foregroundColor(.white)
             .cornerRadius(4)
             .alert(isPresented: $isAlert) { () -> Alert in
-                Alert(title: Text("Update Title"),
-                      message: Text("Provide your updated title here"),
+                Alert(title: Text("Wohoo!!!"),
+                      message: Text("Title updated successfully"),
                       primaryButton: .default(Text("Ok"), action: {
-                    updateTitle("new")
+                    //updateTitle("new")
                 }), secondaryButton: .cancel())
         }
         }

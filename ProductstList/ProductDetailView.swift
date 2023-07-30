@@ -52,8 +52,8 @@ struct ProductDetailView: View {
             
             Button(action: {
                 if !updatedTitle.isEmpty {
-                    self.isAlert = true
                     updateTitle(updatedTitle)
+                    self.isAlert = true
                 } else {
                     print("updated title is not choosen---")
                 }

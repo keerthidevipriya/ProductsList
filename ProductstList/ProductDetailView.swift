@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @Binding var isShowing: Bool
     @State private var isAlert = false
     @State private var updatedTitle = String()
     var album: Album
@@ -49,8 +50,12 @@ struct ProductDetailView: View {
             })*/
             
             Button(action: {
-                self.isAlert = true
-                updateTitle("newwww")
+                if !updatedTitle.isEmpty {
+                    self.isAlert = true
+                    updateTitle(updatedTitle)
+                } else {
+                    print("updated title is not choosen---")
+                }
             }) {
                 Text("Update Title")
                 .foregroundColor(Color.white)
@@ -73,16 +78,18 @@ struct ProductDetailView: View {
     }
     
     func updateTitle(_ title: String) {
+        isShowing = false
         print("\(title)----")
         //updateAlbum(album.id, title: "new")
     }
 }
 
-struct ProductDetailView_Previews: PreviewProvider {
+/*struct ProductDetailView_Previews: PreviewProvider {
+    @State var isShowing: Bool = projectedValue
     static var previews: some View {
-        ProductDetailView(album: ApiIntegration().loadJson().first!)
+        ProductDetailView(isShowing: projectedValue, album: ApiIntegration().loadJson().first!)
     }
-}
+}*/
 
 struct StdBtn: View {
     var title: String

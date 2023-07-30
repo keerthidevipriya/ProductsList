@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @State var showsAlert = false
     var album: Album
     var body: some View {
         VStack(spacing: 20) {
@@ -54,7 +55,7 @@ struct ProductDetailView_Previews: PreviewProvider {
 struct StdBtn: View {
     var title: String
     var body: some View {
-        Text("Save")
+        Text(title)
             .bold()
             .font(.subheadline)
             .frame(width: 220,height: 30)

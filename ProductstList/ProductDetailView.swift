@@ -12,6 +12,7 @@ struct ProductDetailView: View {
     @State private var isAlert = false
     @State private var updatedTitle = String()
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) private var viewContext
     var album: Album
     var body: some View {
         VStack(spacing: 20) {
@@ -51,12 +52,20 @@ struct ProductDetailView: View {
             })*/
             
             Button(action: {
-                if !updatedTitle.isEmpty {
-                    updateTitle(updatedTitle)
-                    self.isAlert = true
-                } else {
-                    print("updated title is not choosen---")
+                withAnimation{
+                    do {
+                        if !updatedTitle.isEmpty {
+                            updateTitle(updatedTitle)
+                            self.isAlert = true
+                            try viewContext.save()
+                        } else {
+                            print("updated title is not choosen---")
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
                 }
+                
             }) {
                 Text("Update Title")
                 .foregroundColor(Color.white)

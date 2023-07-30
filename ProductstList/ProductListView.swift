@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductListView: View {
     @State private var isShowingDetail = false
     @State var albums = ApiIntegration().loadJson()
+    @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
         NavigationView {
             List(0..<albums.count) { item in

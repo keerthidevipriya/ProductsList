@@ -13,7 +13,7 @@ struct ProductListView: View {
         NavigationView {
             List(0..<albums.count) { item in
                 NavigationLink(destination: ProductDetailView(album: albums[item]), label: {
-                    Section {
+                    //Section {
                         Image("img1")
                             .resizable()
                             .scaledToFit()
@@ -33,14 +33,13 @@ struct ProductListView: View {
                             
                         }
                         //.padding()
-                   } header: {
+                   /*} header: {
                        Text("AlbumId: \(albums[item].albumId)")
-                   }
+                   }*/
                 })
                 //.padding()
             }
             .navigationTitle("List")
-            //.padding()
         }
     }
 }

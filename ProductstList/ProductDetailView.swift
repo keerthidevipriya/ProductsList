@@ -10,7 +10,9 @@ import SwiftUI
 struct ProductDetailView: View {
     var album: Album
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
+            Spacer()
+            
             Image("img1")
                 .resizable()
                 .scaledToFit()
@@ -30,7 +32,7 @@ struct ProductDetailView: View {
                     //.font(.system(size: 16.0, weight: .bold))
             }.padding()
             
-           // Spacer()
+           Spacer()
             
             Link(destination: URL(string: album.thumbnailUrl)!, label: {
                 Text("Save")

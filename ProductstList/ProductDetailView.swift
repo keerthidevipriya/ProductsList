@@ -30,8 +30,16 @@ struct ProductDetailView: View {
                     //.font(.system(size: 16.0, weight: .bold))
             }.padding()
             
+           // Spacer()
+            
             Link(destination: URL(string: album.thumbnailUrl)!, label: {
-                Text("Link")
+                Text("Save")
+                    .bold()
+                    .font(.subheadline)
+                    .frame(width: 220,height: 30)
+                    .background(Color(.red))
+                    .foregroundColor(.white)
+                    .cornerRadius(4)
             })
         }.padding()
     }

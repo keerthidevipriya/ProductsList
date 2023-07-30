@@ -17,7 +17,9 @@ struct ProductListView: View {
                 })
             }
             .navigationTitle("List")
-            .navigationBarItems(leading: EditButton())
+            .navigationBarItems(leading: EditButton(), trailing: Button("Update Title", action: {
+                albums[0].title = "updatedTitle"
+            }))
         }
     }
     

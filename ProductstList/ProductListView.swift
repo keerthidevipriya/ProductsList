@@ -25,7 +25,7 @@ struct ProductListView: View {
                             .lineLimit(2)
                             //.fontWeight(.semibold)
                             .minimumScaleFactor(0.5)
-                        Text("21 oct 2021")
+                        Text("title can b updated")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                         

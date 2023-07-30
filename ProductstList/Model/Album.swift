@@ -11,6 +11,7 @@ struct Album: Codable {
     var albumId: Int
     var id: Int
     var title: String?
+    var updatedTitle: String?
     var url: String?
     var thumbnailUrl: String?
 }

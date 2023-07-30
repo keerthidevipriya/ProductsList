@@ -11,6 +11,7 @@ struct ProductDetailView: View {
     @Binding var isShowing: Bool
     @State private var isAlert = false
     @State private var updatedTitle = String()
+    @Environment(\.presentationMode) var presentationMode
     var album: Album
     var body: some View {
         VStack(spacing: 20) {
@@ -81,6 +82,7 @@ struct ProductDetailView: View {
         isShowing = false
         print("\(title)----")
         //updateAlbum(album.id, title: "new")
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

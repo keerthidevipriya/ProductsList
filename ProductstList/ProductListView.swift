@@ -14,12 +14,16 @@ struct ProductListView: View {
     var body: some View {
         NavigationView {
             List(0..<albums.count) { item in
-                NavigationLink(destination: ProductDetailView(isShowing: $isShowingDetail, album: albums[item]), isActive: $isShowingDetail, label: {
-                    ProductCell(album: albums[item])
-                })
-                /*NavigationLink(destination: ProductDetailView(album: albums[item]), label: {
-                    ProductCell(album: albums[item])
-                })*/
+                NavigationLink(
+                    destination: ProductDetailView(
+                        isShowing: $isShowingDetail,
+                        album: albums[item]
+                    ),
+                    isActive: $isShowingDetail,
+                    label: {
+                        ProductCell(album: albums[item])
+                    }
+                )
             }
             .navigationTitle("List")
             .navigationBarItems(leading: EditButton(), trailing: Button("Update Title", action: {

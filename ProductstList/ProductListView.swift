@@ -12,29 +12,31 @@ struct ProductListView: View {
     var body: some View {
         NavigationView {
             List(0..<albums.count) { item in
-                //Section {
-                    Image("img1")
-                        .resizable()
-                        .scaledToFit()
-                        .imageScale(.large)
-                        .frame(height: 90)
-                        .cornerRadius(4)
-                        .foregroundColor(.accentColor)
-                        .padding(.vertical, 4)
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(albums[item].title ?? "Default Title")
-                            .lineLimit(2)
-                            //.fontWeight(.semibold)
-                            .minimumScaleFactor(0.5)
-                        Text("title can b updated")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        
-                    }
-                    //.padding()
-               /* } header: {
-                    Text("Sections")
-                }*/
+                NavigationLink(destination: ProductDetailView(album: albums[item]), label: {
+                    //Section {
+                        Image("img1")
+                            .resizable()
+                            .scaledToFit()
+                            .imageScale(.large)
+                            .frame(height: 90)
+                            .cornerRadius(4)
+                            .foregroundColor(.accentColor)
+                            .padding(.vertical, 4)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(albums[item].title ?? "Default Title")
+                                .lineLimit(2)
+                                //.fontWeight(.semibold)
+                                .minimumScaleFactor(0.5)
+                            Text("title can b updated")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                        }
+                        //.padding()
+                   /* } header: {
+                        Text("Sections")
+                    }*/
+                })
                 //.padding()
             }
             .navigationTitle("List")

@@ -35,13 +35,7 @@ struct ProductDetailView: View {
            Spacer()
             
             Link(destination: URL(string: album.thumbnailUrl)!, label: {
-                Text("Save")
-                    .bold()
-                    .font(.subheadline)
-                    .frame(width: 220,height: 30)
-                    .background(Color(.red))
-                    .foregroundColor(.white)
-                    .cornerRadius(4)
+                StdBtn(title: "Save")
             })
         }.padding()
     }
@@ -50,5 +44,18 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailView(album: ApiIntegration().loadJson().first!)
+    }
+}
+
+struct StdBtn: View {
+    var title: String
+    var body: some View {
+        Text("Save")
+            .bold()
+            .font(.subheadline)
+            .frame(width: 220,height: 30)
+            .background(Color(.red))
+            .foregroundColor(.white)
+            .cornerRadius(4)
     }
 }

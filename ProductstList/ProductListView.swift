@@ -17,6 +17,7 @@ struct ProductListView: View {
                 })
             }
             .navigationTitle("List")
+            .navigationBarItems(leading: EditButton())
         }
     }
     

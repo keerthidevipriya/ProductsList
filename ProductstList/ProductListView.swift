@@ -19,6 +19,10 @@ struct ProductListView: View {
             .navigationTitle("List")
         }
     }
+    
+    func updateAlbum(_ id: Int, title: String) {
+        albums[id].title = title
+    }
 }
 
 struct ProductCell: View {

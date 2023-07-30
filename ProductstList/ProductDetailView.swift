@@ -39,6 +39,10 @@ struct ProductDetailView: View {
             })
         }.padding()
     }
+    
+    func updateTitle(_ title: String) {
+        //updateAlbum(album.id, title: "new")
+    }
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
